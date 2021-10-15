@@ -1,4 +1,4 @@
-import Tasks from "./ToDoModal";
+import Tasks from "../Modals/ToDoModal";
 
 const TaskList = [
 

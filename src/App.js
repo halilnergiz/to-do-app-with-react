@@ -1,6 +1,6 @@
 import React from "react";
-import SimpleMap from "./Map";
-import TaskList from "./ToDoList";
+import SimpleMap from "./GoogleMapAPI/Map";
+import TaskList from "./ToDoDb/ToDoList";
 
 
 class App extends React.Component {
