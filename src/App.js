@@ -1,15 +1,13 @@
 import React from "react";
-import SimpleMap from "./GoogleMapAPI/Map";
 import TaskList from "./ToDoDb/ToDoList";
-
+import PageView from './view/PageView'
 
 class App extends React.Component {
   render() {
     return (
       <div>
         {TaskList.map(task => console.log(task))}
-
-        <SimpleMap></SimpleMap>
+        <PageView/>
       </div>
     );
   }
