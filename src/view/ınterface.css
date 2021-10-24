@@ -186,7 +186,12 @@ ul {
 }
 
 li {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    transition: .5s;
+}
+
+li:hover{
+    margin-bottom: 3rem;
 }
 
 .container{
@@ -198,20 +203,20 @@ li {
     height: 7rem;
     box-shadow: inset 5px 5px 30px rgba(22, 77, 114, 0.596);
     border-radius: 15px;
-    margin-bottom: 1rem;
     padding: 1rem;
     transition: .5s;
 }
 
 .card:hover {
     box-shadow: inset 10px 10px 30px rgba(22, 77, 114, 0.596);
+    margin-bottom: 30px;
 }
 
 .card:hover>label>.box{
     position: relative;
     top: -2px;
     height: 8.2rem;
-    left: -2px;
+    left: -4px;
     width: 38.5rem;
 
 }
@@ -268,8 +273,8 @@ li {
 
 .task-ex-date {
     position: absolute;
-    bottom: .1rem;
-    left: 29rem;
+    top: 4rem;
+    left: 31rem;
 }
 
 #overlay {
