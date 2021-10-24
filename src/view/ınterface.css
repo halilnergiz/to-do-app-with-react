@@ -140,14 +140,12 @@ html {
     transition: opacity linear .3s;
 }
 
-
 .to-do-app .input-field .btn-close {
     position: relative;
     left: 11rem;
-
     border: none;
     color: white;
-    background-color: rgb(214, 0, 0) ;
+    background-color: rgb(214, 0, 0);
     padding: 10px;
     border-radius: 10px;
     font-size: 1.2rem;
@@ -159,16 +157,14 @@ html {
 }
 
 .to-do-app .pop-up .input-field .btn-close:hover {
-    background-color:  rgb(233, 2, 2);
+    background-color: rgb(233, 2, 2);
     transition: linear .3s;
 }
-
-
 
 /* BODY - TASK LİST */
 
 .task-list {
-    box-sizing: border-box;
+
     font-family: 'Rubik', sans-serif;
     position: relative;
     top: -15rem;
@@ -190,13 +186,16 @@ ul {
 }
 
 li {
-    margin-top: 5rem;
+    margin-top: 2rem;
+}
+
+.container{
+    height: 10rem;
 }
 
 .card {
-    box-sizing: border-box;
     width: 38rem;
-    height: 8rem;
+    height: 7rem;
     box-shadow: inset 5px 5px 30px rgba(22, 77, 114, 0.596);
     border-radius: 15px;
     margin-bottom: 1rem;
@@ -208,6 +207,19 @@ li {
     box-shadow: inset 10px 10px 30px rgba(22, 77, 114, 0.596);
 }
 
+.card:hover>label>.box{
+    position: relative;
+    top: -2px;
+    height: 8.2rem;
+    left: -2px;
+    width: 38.5rem;
+
+}
+
+.card:hover>label>.box>.content{
+    font-size: 18px;
+}
+
 .box {
     display: flex;
     justify-content: center;
@@ -216,34 +228,36 @@ li {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     height: 8rem;
-    box-sizing: border-box;
-    position: relative;
-    left: 0;
+    width: 38rem;
+
     top: 0;
-    transition-duration: .3s;
+    left: 0;
+    position: relative;
+
+
+    transition-duration: .2s;
     transition-timing-function: linear;
+    /* border: 1px solid blue; */
 }
 
 .box:hover {
-    position: relative;
-    top: .5rem;
-    left: .5rem;
     background-color: #dcf1ffaf;
     /* background-color: rgba(94, 193, 240, 0.164); */
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
 }
 
 .content {
-    width: 35rem;
-    height: 8.5rem;
+    min-width: 37rem;
+    min-height: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid black; */
     position: relative;
-    bottom: -.5rem;
+    bottom: 0rem;
     margin: 0;
     padding: 0;
+    /* border: 1px solid red;  */
+    transition: .3s;
 }
 
 .task-h2 {
@@ -252,32 +266,19 @@ li {
     margin: 0;
 }
 
-.task-p {
-    position: relative;
-    width: 25rem;
-    height: 25px;
-    /* border: 1px solid red; */
-    white-space: nowrap;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .task-ex-date {
-    position: relative;
-    bottom: 1.5rem;
-    left: 14rem;
+    position: absolute;
+    bottom: .1rem;
+    left: 29rem;
 }
 
-#overlay{
-
+#overlay {
     visibility: hidden;
     transition: 1.5s;
     transition-timing-function: ease-in-out;
 }
 
 #click:checked~#overlay {
-    /* display: block; */
     visibility: visible;
     position: fixed;
     top: 0;
@@ -285,25 +286,7 @@ li {
     left: 0;
     right: 0;
     background-color: #badcf5;
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* CLİCK li TAG */
 
