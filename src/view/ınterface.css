@@ -1,22 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Rubik:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 html {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-color: #e3f2fd;
 }
 
 /* HEADER */
 
-.to-do-app {
+.main {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.to-do-app h1 {
-    user-select: none;
-    margin-bottom: 4rem;
 }
 
 /*POP-UP*/
@@ -33,27 +28,27 @@ html {
     font-weight: bold;
     cursor: pointer;
     top: 1rem;
-    z-index: 1;
     padding: 1rem 6rem;
-    left: 0;
+    margin: 0;
+    left: 30px;
     transition-property: left, opacity;
     transition-duration: .5s;
 }
 
 .create-btn:hover {
-    left: -30px;
+    left: -5px;
     opacity: 1;
 }
 
-#click {
+#crt-click {
     display: none;
 }
 
-#click:checked~.create-btn {
+#crt-click:checked~.create-btn {
     display: none;
 }
 
-/* pop-up content*/
+/* POP-UP CONTENT */
 
 .to-do-app .pop-up {
     position: relative;
@@ -68,7 +63,7 @@ html {
     border-radius: 1rem;
 }
 
-#click:checked~.pop-up {
+#crt-click:checked~.pop-up {
     opacity: 1;
     visibility: visible;
     left: 0;
@@ -140,7 +135,7 @@ html {
     transition: opacity linear .3s;
 }
 
-.to-do-app .input-field .btn-close {
+.to-do-app .pop-up .input-field .btn-close {
     position: relative;
     left: 11rem;
     border: none;
@@ -164,126 +159,108 @@ html {
 /* BODY - TASK LİST */
 
 .task-list {
-
     font-family: 'Rubik', sans-serif;
     position: relative;
-    top: -15rem;
+    bottom: 20rem;
+    padding: 3rem;
     transition-duration: .7s;
     transition-timing-function: ease-out;
     transition-property: top;
 }
 
-#click:checked~.task-list {
+#crt-click:checked~.task-list {
     top: 1rem;
 }
 
-#click:checked~.task-list {
+#crt-click:checked~.task-list {
     opacity: 0;
 }
 
-ul {
+/* taskList is moving to left with style codes on js file*/
+
+/* that's main style */
+
+.taskList {
+    position: relative;
+    top: 3rem;
+    left: 0;
+    transition: .7s;
     list-style: none;
 }
 
 li {
-    margin-top: 1rem;
+    margin-top: -15px;
     transition: .5s;
+    bottom: 7rem;
+    /* margin-top: 5rem; */
 }
 
-li:hover{
-    margin-bottom: 3rem;
+li:hover {
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
 }
 
-.container{
+.container {
     height: 10rem;
-}
-
-.card {
-    width: 38rem;
-    height: 7rem;
-    box-shadow: inset 5px 5px 30px rgba(22, 77, 114, 0.596);
-    border-radius: 15px;
-    padding: 1rem;
-    transition: .5s;
-}
-
-.card:hover {
-    box-shadow: inset 10px 10px 30px rgba(22, 77, 114, 0.596);
-    margin-bottom: 30px;
-}
-
-.card:hover>label>.box{
     position: relative;
-    top: -2px;
-    height: 8.2rem;
-    left: -4px;
-    width: 38.5rem;
-
-}
-
-.card:hover>label>.box>.content{
-    font-size: 18px;
+    margin: 0 auto;
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ebf5fc;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    height: 8rem;
-    width: 38rem;
 
-    top: 0;
+    background: #ebf5fc;
+    box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-height: max-content;
+    padding: 1.8rem;
+    width: 38rem;
+    bottom: 2rem;
     left: 0;
     position: relative;
-
-
-    transition-duration: .2s;
-    transition-timing-function: linear;
-    /* border: 1px solid blue; */
+    transition: .5s;
 }
 
 .box:hover {
-    background-color: #dcf1ffaf;
-    /* background-color: rgba(94, 193, 240, 0.164); */
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content {
-    min-width: 37rem;
-    min-height: 7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    bottom: 0rem;
-    margin: 0;
-    padding: 0;
-    /* border: 1px solid red;  */
-    transition: .3s;
+.box:hover .content .task-h2 {
+    font-size: 26px;
+    letter-spacing: 1px;
 }
 
 .task-h2 {
-    /* border: 1px solid blue; */
     padding: 0;
     margin: 0;
+    /* position: relative;
+    left: 0;
+    top: 0;
+    width: 105px; */
+    transition: .5s ;
+}
+
+.task-p {
+    display: block;
+    margin: 5px auto;
+    margin-left: 5px;
 }
 
 .task-ex-date {
-    position: absolute;
-    top: 4rem;
-    left: 31rem;
+    position: relative;
+    display: inline-block;
+    left: 35rem;
+    top: 1rem;
+    z-index: 20;
 }
 
 #overlay {
+    position: absolute;
     visibility: hidden;
     transition: 1.5s;
     transition-timing-function: ease-in-out;
 }
 
-#click:checked~#overlay {
+#crt-click:checked~#overlay {
     visibility: visible;
     position: fixed;
     top: 0;
@@ -293,14 +270,120 @@ li:hover{
     background-color: #badcf5;
 }
 
-/* CLİCK li TAG */
+.map {
+    position: absolute;
+    left: -75rem;
+    bottom: -7rem;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    opacity: 0;
+    transition: .7s;
+}
 
-/* #task-click:checked~.box{
+.content {
+    /* background-color: red !important; */
+    /* border: 2px solid black; */
+    border-radius: 1rem;
+    overflow: hidden;
+    min-width: 37rem;
+    width: 80%;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    bottom: 1rem;
-    color: red;
-} */
+    bottom: .5rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* READ MORE */
+
+.content::after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(transparent -10px, #ebf5fc);
+    position: absolute;
+    top: 55px;
+}
+
+/* if you click 'Read More', 'active' will add to content's class. So content's class will be 'content active' */
+
+.content.active::after {
+    content: '';
+    width: 100%;
+    height: 800px;
+    background: none;
+}
+
+.content.active {
+    display: inline-block;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.more {
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    bottom: .5rem;
+}
+
+li.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 5rem;
+
+    transition: .5s;
+}
+
+
+#read-more{
+    font-weight: bold;
+    padding: 5px 5px;
+    transition: .5s;
+}
+
+#read-more:hover{
+    right:1.5rem ;
+    bottom: 0rem;
+}
+
+/* CLİCK TO ANY TASK */
 
 #task-click {
     display: none;
+    margin: 0;
+}
+
+/* DELETE ALL */
+
+#delete-all {
+    opacity: 0;
+}
+
+.delete-all-btn {
+    position: fixed;
+    left: 1rem;
+    bottom: 2rem;
+    background-color: rgb(160, 4, 4);
+    color: white;
+    padding: 12px 22px;
+    opacity: .8;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.delete-all-btn:hover {
+    opacity: 1;
+    font-size: 17px;
+    padding: 13px 23px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.11);
 }
