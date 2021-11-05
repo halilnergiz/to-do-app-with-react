@@ -1,7 +1,7 @@
 import React from "react";
 
 class Task extends React.Component {
-    constructor(taskCaption, taskContent, executionDate, address, isCompleted, index) {
+    constructor(taskCaption, taskContent, executionDate, address, isCompleted, id) {
         super();
 
         this.taskCaption = taskCaption;
@@ -9,7 +9,7 @@ class Task extends React.Component {
         this.executionDate = executionDate;
         this.address = address;
         this.isCompleted = isCompleted;
-        this.index = index;
+        this.id = id;
     }
 
 }

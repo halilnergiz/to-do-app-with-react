@@ -189,27 +189,26 @@ html {
 }
 
 li {
-    margin-top: -15px;
+    /* margin-top: -15px; */
     transition: .5s;
-    bottom: 7rem;
-    /* margin-top: 5rem; */
+    /* bottom: 7rem; */
 }
 
 li:hover {
-    margin-bottom: 1.5rem;
-    margin-top: .5rem;
+    /* margin-bottom: 1.5rem; */
+    /* margin-top: .5rem; */
 }
 
 .container {
     height: 10rem;
     position: relative;
     margin: 0 auto;
+    cursor: default;
 }
 
 .box {
-
     background: #ebf5fc;
-    box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px -3px 5px 2px rgba(0, 0, 0, 0.1), 10px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     max-height: max-content;
     padding: 1.8rem;
@@ -273,8 +272,9 @@ li:hover {
 .map {
     position: absolute;
     left: -75rem;
-    bottom: -7rem;
-    height: 100%;
+    bottom: -5rem;
+    height: 70%;
+    top: 20%;
     width: 100%;
     border: 1px solid black;
     opacity: 0;
@@ -289,9 +289,11 @@ li:hover {
     min-width: 37rem;
     width: 80%;
     height: 4.5rem;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+
     position: relative;
     bottom: .5rem;
     margin: 0;
@@ -319,10 +321,9 @@ li:hover {
 }
 
 .content.active {
-    display: inline-block;
     height: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
 }
 
 .more {
@@ -333,15 +334,8 @@ li:hover {
 }
 
 li.active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 5rem;
-
-    transition: .5s;
+    margin-bottom: 4rem;
 }
-
 
 #read-more{
     font-weight: bold;
@@ -350,8 +344,7 @@ li.active{
 }
 
 #read-more:hover{
-    right:1.5rem ;
-    bottom: 0rem;
+    letter-spacing: 2px;
 }
 
 /* CLİCK TO ANY TASK */
